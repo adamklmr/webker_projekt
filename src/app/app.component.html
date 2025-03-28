@@ -1,4 +1,5 @@
-<mat-sidenav-container>
+<header>
+    <mat-sidenav-container>
     <mat-sidenav #sidenav>
       <app-menu [sidenav]="sidenav"></app-menu>
     </mat-sidenav>
@@ -10,16 +11,22 @@
           class="menu-toggle-button">
           <mat-icon>menu</mat-icon>
         </button>
-        <div>Goldfish</div>
+        <img src="/img/logo.png" routerLink="/home">
         <nav>
           <ul>
-            <li><a routerLink="/home">Főoldal</a></li>
             <li><a routerLink="/orsok">Orsók</a></li>
             <li><a routerLink="/botok">Botok</a></li>
-        
           </ul>
+          <mat-icon id="profile-icon" routerLink="/profile">person</mat-icon>
+          <mat-icon id="cart-icon" routerLink="/cart">shopping_cart</mat-icon>
+
         </nav>
       </mat-toolbar>
       <router-outlet />
     </mat-sidenav-content>
   </mat-sidenav-container>
+</header>
+
+<footer>
+    <p>&copy; 2021 Goldfish Horgászbolt</p>
+</footer>
