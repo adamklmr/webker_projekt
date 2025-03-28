@@ -1,29 +1,22 @@
-/* menu.component.scss */
-
-:host {
-    display: block;
-    background-color: #f8f9fa;
-    padding: 1rem;
-    border-radius: 8px;
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    border-radius: 0 !important;
 }
 
-.menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 1rem;
+.mdc-list-item:focus::before {
+    opacity: 0 !important;
 }
 
-.menu-item {
-    a {
-        text-decoration: none;
-        color: #007bff;
-        font-weight: bold;
-        transition: color 0.3s ease;
-
-        &:hover {
-            color: #0056b3;
-        }
-    }
+.active-list-item {
+    background-color: rgba(90, 74, 247, 0.3);
+    color: white;
+    font-weight: bold;
 }
+
+mat-nav-list {
+    min-width: 200px;
+}
+
+

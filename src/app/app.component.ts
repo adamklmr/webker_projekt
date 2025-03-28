@@ -1,21 +1,32 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { ProfileComponent } from './pages/profile/profile.component';
 import { MenuComponent } from './shared/menu/menu.component';
-import { NgIf } from '@angular/common';
-import { ProductsComponent } from './pages/products/products.component';
-import { AdminComponent } from './pages/admin/admin.component';
+import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { RouterLink } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HomeComponent,ProfileComponent,MenuComponent,ProductsComponent,AdminComponent,NgIf],
+  imports: [
+    RouterOutlet,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    RouterLink,
+    MenuComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'horgaszbolt';
+  title = 'Horgászbolt';
 
-  page = "home";
+  onToggleSidenav(sidenav: MatSidenav){
+    sidenav.toggle();
+  }
 }
- 

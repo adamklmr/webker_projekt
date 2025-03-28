@@ -1,11 +1,25 @@
-<app-menu></app-menu>
- @if (page === "home") {
-    <app-home></app-home>
-} @else if(page === "products") {
-    <app-products></app-products>
-} @else if (page === "profile") {
-    <app-profile></app-profile>
-} @else if (page === "admin") {
-    <app-admin></app-admin>
-}
-
+<mat-sidenav-container>
+    <mat-sidenav #sidenav>
+      <app-menu [sidenav]="sidenav"></app-menu>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar>
+        <button 
+          mat-button 
+          (click)="onToggleSidenav(sidenav)"
+          class="menu-toggle-button">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <div>Goldfish</div>
+        <nav>
+          <ul>
+            <li><a routerLink="/home">Főoldal</a></li>
+            <li><a routerLink="/orsok">Orsók</a></li>
+            <li><a routerLink="/botok">Botok</a></li>
+        
+          </ul>
+        </nav>
+      </mat-toolbar>
+      <router-outlet />
+    </mat-sidenav-content>
+  </mat-sidenav-container>
