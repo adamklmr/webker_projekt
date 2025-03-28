@@ -1,0 +1,29 @@
+/* menu.component.scss */
+
+:host {
+    display: block;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.menu-item {
+    a {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #0056b3;
+        }
+    }
+}

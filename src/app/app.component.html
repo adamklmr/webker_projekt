@@ -1,2 +1,11 @@
- <app-home></app-home>
-<!-- <router-outlet/> -->
+<app-menu></app-menu>
+ @if (page === "home") {
+    <app-home></app-home>
+} @else if(page === "products") {
+    <app-products></app-products>
+} @else if (page === "profile") {
+    <app-profile></app-profile>
+} @else if (page === "admin") {
+    <app-admin></app-admin>
+}
+
