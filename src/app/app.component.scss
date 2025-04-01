@@ -55,7 +55,7 @@ mat-sidenav {
     }
 }
 .search-bar{
-    margin-left: 60px;
+    justify-content: center;
     display: flex;
     position: relative;
     border-radius: 50px;
@@ -71,7 +71,7 @@ mat-sidenav {
 }
 .profile-icon{
     position: absolute;
-    right: 10px;
+    right: 100px;
 }
 .cart-icon{
     position: absolute;

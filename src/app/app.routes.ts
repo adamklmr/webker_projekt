@@ -8,10 +8,23 @@ import { CartComponent } from './pages/cart/cart.component';
 import { AdminComponent } from './pages/admin/admin.component';
 
 export const routes: Routes = [
-    { path: 'home', component: HomeComponent },
+    {
+        path: 'home',
+        loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent)
+    },
 
-    { path: 'profile', component: ProfileComponent },
-
+    {
+        path: 'profile',
+        loadComponent: () => import('./pages/profile/profile.component').then(m => m.ProfileComponent)
+    },
+    {
+        path: 'login',
+        loadComponent: () => import('./pages/login/login.component').then(m => m.LoginComponent)
+    },
+    {
+        path: 'signup',
+        loadComponent: () => import('./pages/signup/signup.component').then(m => m.SignupComponent)
+    },
     {
         path: 'termekek',
         loadComponent: () => import('./pages/termekek/termekek.component').then(m => m.TermekekComponent),
@@ -20,18 +33,13 @@ export const routes: Routes = [
         path: 'esemenyek',
         loadComponent: () => import('./pages/esemenyek/esemenyek.component').then(m => m.EsemenyekComponent),
     },
-
-    
-
-    { path: 'signup', component: SignupComponent },
-
-    { path: 'login', component: LoginComponent},
-
-    { path: 'cart', component: CartComponent},
-
-    { path: 'admin', component: AdminComponent},
-
-
-    { path: '**', component: PageNotFoundComponent },
-
+    {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full'
+    },
+    {
+        path: '**',
+        loadComponent: () => import('./shared/page-not-found/page-not-found.component').then(m => m.PageNotFoundComponent)
+    },
 ];
