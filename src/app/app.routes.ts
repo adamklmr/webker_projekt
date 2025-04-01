@@ -11,14 +11,14 @@ export const routes: Routes = [
     { path: 'home', component: HomeComponent },
 
     { path: 'profile', component: ProfileComponent },
-    // Lazy loading
+
     {
-        path: 'orsok',
-        loadComponent: () => import('./pages/orsok/orsok.component').then(m => m.OrsokComponent),
+        path: 'termekek',
+        loadComponent: () => import('./pages/termekek/termekek.component').then(m => m.TermekekComponent),
     },
     {
-        path: 'botok',
-        loadComponent: () => import('./pages/botok/botok.component').then(m => m.BotokComponent),
+        path: 'esemenyek',
+        loadComponent: () => import('./pages/esemenyek/esemenyek.component').then(m => m.EsemenyekComponent),
     },
 
     

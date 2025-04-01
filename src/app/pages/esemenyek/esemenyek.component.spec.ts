@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OrsokComponent } from './orsok.component';
+import { EsemenyekComponent } from './esemenyek.component';
 
-describe('OrsokComponent', () => {
-  let component: OrsokComponent;
-  let fixture: ComponentFixture<OrsokComponent>;
+describe('EsemenyekComponent', () => {
+  let component: EsemenyekComponent;
+  let fixture: ComponentFixture<EsemenyekComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [OrsokComponent]
+      imports: [EsemenyekComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(OrsokComponent);
+    fixture = TestBed.createComponent(EsemenyekComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

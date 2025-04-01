@@ -1,6 +1,5 @@
 nav {
     display: flex;
-    justify-content: center;
     width: 100%;
 }
 
@@ -9,13 +8,18 @@ ul {
     list-style: none;
     margin-block-start: 0;
     margin-block-end: 0;
+    
 }
-
 a {
     text-decoration: none;
     color: white;
     padding: 18px;
+    padding-bottom: 22px;
     font-size: 25px;
+    &:hover {
+        background-color: darken(#005cbb, 10%);
+        cursor: pointer;
+    }
 }
 
 mat-sidenav-container {
@@ -41,17 +45,45 @@ mat-sidenav {
 @media (max-width: 768px) {
     .menu-toggle-button {
         display: block;
+        z-index: 100;
     }
     
     nav ul {
         display: none;
+        z-index: 100;
+
     }
 }
-#profile-icon{
+.search-bar{
+    margin-left: 60px;
+    display: flex;
+    position: relative;
+    border-radius: 50px;
+    width: 30%; 
+    height: 40px;
+    background-color: #f2f2f2;
+}
+.search-button{
+     position: relative;
+     background-color: white;
+     border: none;
+     border-radius: 50px;
+}
+.profile-icon{
     position: absolute;
     right: 10px;
 }
-#cart-icon{
+.cart-icon{
     position: absolute;
     right: 50px;
 }
+ footer{
+    background-color: #005cbb;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+ }
+  

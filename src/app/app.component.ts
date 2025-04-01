@@ -6,7 +6,9 @@ import { MatToolbar, MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
-import { SearchComponent } from './shared/search/search.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { EsemenyekComponent } from './pages/esemenyek/esemenyek.component';
+import { TermekekComponent } from './pages/termekek/termekek.component';
 
 
 
@@ -18,15 +20,20 @@ import { SearchComponent } from './shared/search/search.component';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
+    MatFormFieldModule,
     RouterLink,
     MenuComponent,
-    MatToolbar,
-    SearchComponent
+    EsemenyekComponent,
+    TermekekComponent,
+    MatToolbar
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+onSearch(arg0: string) {
+throw new Error('Method not implemented.');
+}
   title = 'Horgászbolt';
 
   onToggleSidenav(sidenav: MatSidenav){

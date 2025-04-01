@@ -1,32 +1,37 @@
 <header>
-    <mat-sidenav-container>
+  <mat-sidenav-container>
     <mat-sidenav #sidenav>
       <app-menu [sidenav]="sidenav"></app-menu>
+    
     </mat-sidenav>
-    <mat-sidenav-content>
-      <mat-toolbar>
-        <button 
-          mat-button 
-          (click)="onToggleSidenav(sidenav)"
-          class="menu-toggle-button">
-          <mat-icon>menu</mat-icon>
-        </button>
-        <img src="/img/logo.png" routerLink="/home">
-        <nav>
-          <ul>
-            <li><a routerLink="/orsok">Orsók</a></li>
-            <li><a routerLink="/botok">Botok</a></li>
-          </ul>
-          <mat-icon id="profile-icon" routerLink="/profile">person</mat-icon>
-          <mat-icon id="cart-icon" routerLink="/cart">shopping_cart</mat-icon>
-        </nav>
-      </mat-toolbar>
-      <router-outlet />
-    </mat-sidenav-content>
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <button 
+        mat-button 
+        (click)="onToggleSidenav(sidenav)"
+        class="menu-toggle-button">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <a routerLink="/home">
+        <img src="pages/img/logo.png" >
+      </a>
+      <nav>
+        <ul>
+          <li><a routerLink="/termekek">Termékek</a></li>
+          <li><a routerLink="/esemenyek">Események</a></li>
+        </ul>
+        <input class="search-bar" type="search">
+        <button class="search-button">Keresés</button>
+    
+        <mat-icon class="profile-icon" routerLink="/profile">person</mat-icon>
+        <mat-icon class="cart-icon" routerLink="/cart">shopping_cart</mat-icon>
+      </nav>
+    </mat-toolbar>
+    <router-outlet />
+  </mat-sidenav-content>
   </mat-sidenav-container>
-  mat-search
 </header>
 
 <footer>
-    <p>&copy; 2021 Goldfish Horgászbolt</p>
+  <p>&copy; 202Goldfish Horgászbolt</p>
 </footer>
