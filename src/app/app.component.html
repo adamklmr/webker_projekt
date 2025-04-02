@@ -15,16 +15,20 @@
       <a routerLink="/home">
         <img src="pages/img/logo.png" >
       </a>
-      <nav>
-        <ul>
+      <nav> 
+        <ul class="menu-container">
           <li><a routerLink="/termekek">Termékek</a></li>
           <li><a routerLink="/esemenyek">Események</a></li>
         </ul>
-        <input class="search-bar" type="search">
-        <button class="search-button">Keresés</button>
-    
-        <mat-icon class="profile-icon" routerLink="/profile">person</mat-icon>
-        <mat-icon class="cart-icon" routerLink="/cart">shopping_cart</mat-icon>
+        <div class="search-bar-container">
+          <input id="search-bar" type="search">
+          <mat-icon id="search-icon">search</mat-icon>
+        </div>
+        <div class="icon-container">
+          <mat-icon id="profile-icon" routerLink="/profile">person</mat-icon>
+          <mat-icon id="cart-icon" routerLink="/cart">shopping_cart</mat-icon>
+          <mat-icon id="admin-icon" routerLink="/admin">shield person</mat-icon>
+        </div>
       </nav>
     </mat-toolbar>
     <router-outlet />
@@ -33,5 +37,5 @@
 </header>
 
 <footer>
-  <p>&copy; 202Goldfish Horgászbolt</p>
+  <p>&copy; 2025 Goldfish Horgászbolt</p>
 </footer>
