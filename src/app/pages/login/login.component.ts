@@ -28,28 +28,34 @@ import { CommonModule } from '@angular/common';
 export class LoginComponent {
   email = new FormControl('');
   password = new FormControl('');
-  // isLoading: boolean = false;
+  // isLoading: boolean = false;src/app/pages/login/login.component.ts
   loginError: string = '';
   showLoginForm: boolean = true;
-  //isAdmin boolean = false;
+  isAdmin: boolean = false;
 
   constructor() {}
 
   login() {
     this.loginError = '';
-    
-    if (this.email.value === 'test@gmail.com' && this.password.value === 'penisz') {
-      // this.isLoading = true;
-      this.showLoginForm = false;
-      
+  
+    const email = this.email.value;
+    const password = this.password.value;
+  
+    if (email === 'test@gmail.com' && password === 'teszt123') {
       localStorage.setItem('isLoggedIn', 'true');
-      
-      // setTimeout(() => {
-      //   
-      // }, 3000);
+      localStorage.setItem('isAdmin', 'false'); // Nem admin user
+      this.showLoginForm = false;
       window.location.href = '/home';
+  
+    } else if (email === 'admin@gmail.com' && password === 'admin') {
+      localStorage.setItem('isLoggedIn', 'true');
+      localStorage.setItem('isAdmin', 'true');
+      this.showLoginForm = false;
+      window.location.href = '/home';
+  
     } else {
       this.loginError = 'Invalid email or password!';
     }
   }
+  
 }

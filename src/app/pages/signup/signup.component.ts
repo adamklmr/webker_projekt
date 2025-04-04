@@ -44,7 +44,7 @@ export class SignupComponent {
 
   signup(): void {
     if (this.signUpForm.invalid) {
-      this.signupError = 'Please correct the form errors before submitting.';
+      this.signupError = 'Kérlek ellenőrizd a megadott adatokat!';
       return;
     }
 
@@ -65,13 +65,14 @@ export class SignupComponent {
       },
       email: this.signUpForm.value.email || '',
       password: this.signUpForm.value.password || '',
+      products: []
     };
 
     console.log('New user:', newUser);
     console.log('Form value:', this.signUpForm.value);
 
-    setTimeout(() => {
-      this.router.navigateByUrl('/home');
-    }, 2000);
+    // setTimeout(() => {
+    //   this.router.navigateByUrl('/home');
+    // }, 2000);
   }
 }

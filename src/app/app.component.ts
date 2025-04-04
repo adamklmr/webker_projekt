@@ -25,8 +25,7 @@ import { CommonModule } from '@angular/common';
     MatIconModule,
     MatFormFieldModule,
     RouterLink,
-    MenuComponent,
-    MatToolbar,
+    MenuComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -34,22 +33,26 @@ import { CommonModule } from '@angular/common';
 export class AppComponent implements OnInit {
   title = 'goldfish';
   isLoggedIn = false;
+  isAdmin= false;
 
   constructor() {}
 
   ngOnInit(): void {
-    this.checkLoginStatus();
+    this.updateAuthStatus();
   }
-
-  checkLoginStatus(): void {
-    this.isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+  
+  updateAuthStatus(): void {
+    const loggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    this.isLoggedIn = loggedIn;
+    this.isAdmin = loggedIn && (localStorage.getItem('isAdmin') === 'true');
   }
-
+  
   logout(): void {
     localStorage.setItem('isLoggedIn', 'false');
     this.isLoggedIn = false;
     window.location.href = '/home';
   }
+  
 
   onToggleSidenav(sidenav: MatSidenav){
     sidenav.toggle();

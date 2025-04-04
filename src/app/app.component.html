@@ -44,8 +44,10 @@
               </div>
            </div>
             <mat-icon id="cart-icon" routerLink="/cart">shopping_cart</mat-icon>
-            <mat-icon id="admin-icon" routerLink="/admin">shield</mat-icon>
-        </div>
+            @if (isAdmin) {
+              <mat-icon id="admin-icon" routerLink="/admin">shield</mat-icon>
+            }
+        </div> 
       </nav>
     </mat-toolbar>
     <router-outlet />

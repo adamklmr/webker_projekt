@@ -1,3 +1,5 @@
+import { Product } from "./Product";
+
 export interface User {
     name: {
       firstname: string;
@@ -5,5 +7,5 @@ export interface User {
     };
     email: string;
     password: string;
-    
+    products: Product[];
   }

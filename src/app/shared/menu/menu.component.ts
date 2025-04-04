@@ -21,6 +21,7 @@ import { CommonModule } from '@angular/common';
 export class MenuComponent implements OnInit, AfterViewInit {
   @Input() sidenav!: MatSidenav;
   @Input() isLoggedIn: boolean = false;
+  @Input() isAdmin: boolean = false;
   @Output() logoutEvent = new EventEmitter<void>();
 
   constructor() {
@@ -29,6 +30,7 @@ export class MenuComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.checkLoginStatus();
+    this.checkAdminStatus();
   }
 
   ngAfterViewInit(): void {
@@ -42,6 +44,10 @@ export class MenuComponent implements OnInit, AfterViewInit {
   }
   checkLoginStatus(): void {
     this.isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+  }
+  checkAdminStatus(): void {
+    this.isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    this.isAdmin = localStorage.getItem('isAdmin') === 'true';
   }
 
   logout() {
