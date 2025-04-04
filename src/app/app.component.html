@@ -21,9 +21,9 @@
           <li><a routerLink="/esemenyek">Események</a></li>
           @if (isLoggedIn) {
           <li class="profile-sidenav"><a routerLink="/profile">Profil</a></li>
-          <li class="login-sidenav"><a routerLink="/login">Bejelentkezés</a></li>
-          }@else {
-          <li class="logout-sidenav"><a mat-list-item (click)="logout()">Kijelentkezés</a></li>
+          <li class="login-sidenav"><a mat-list-item (click)="logout()">Kijelentkezés</a></li>
+          }@if(!isLoggedIn) {
+          <li class="logout-sidenav"><a routerLink="/login">Bejelentkezés</a></li>
           }
         </ul>
         <div class="search-bar-container">

@@ -11,22 +11,20 @@
       <mat-icon matListItemIcon>event</mat-icon>
       <span matListItemTitle>Események</span>
     </a>
-    @if (!isLoggedIn) {
+    @if (isLoggedIn) {
       <a mat-list-item routerLink="/profile" routerLinkActive="active-list-item" (click)="closeMenu()">
         <mat-icon matListItemIcon>person</mat-icon>
         <span matListItemTitle>Profil</span>
       </a>
+      <a mat-list-item (click)="logout()">
+        <mat-icon matListItemIcon>logout</mat-icon>
+        <span matListItemTitle>Kijelentkezés</span>
+      </a>
     }
-    @if (!isLoggedIn) {
+    @else{
     <a mat-list-item routerLink="/login" routerLinkActive="active-list-item" (click)="closeMenu()">
       <mat-icon matListItemIcon>login</mat-icon>
       <span matListItemTitle>Bejelentkezés</span>
     </a>
-    }
-    @if (isLoggedIn) {
-      <a mat-list-item (click)="logout()">
-        <mat-icon matListItemIcon>logout</mat-icon>
-        <span matListItemTitle>Logout</span>
-      </a>
-    }
+    }    
   </mat-nav-list>

@@ -22,13 +22,13 @@ export class MenuComponent implements OnInit, AfterViewInit {
   @Input() sidenav!: MatSidenav;
   @Input() isLoggedIn: boolean = false;
   @Output() logoutEvent = new EventEmitter<void>();
-  
+
   constructor() {
     console.log("constructor called");
   }
 
   ngOnInit(): void {
-    console.log("ngOnInit called");
+    this.checkLoginStatus();
   }
 
   ngAfterViewInit(): void {
@@ -39,6 +39,9 @@ export class MenuComponent implements OnInit, AfterViewInit {
     if (this.sidenav) {
       this.sidenav.close();
     }
+  }
+  checkLoginStatus(): void {
+    this.isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
   }
 
   logout() {
