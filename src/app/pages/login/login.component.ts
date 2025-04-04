@@ -28,24 +28,26 @@ import { CommonModule } from '@angular/common';
 export class LoginComponent {
   email = new FormControl('');
   password = new FormControl('');
-  isLoading: boolean = false;
+  // isLoading: boolean = false;
   loginError: string = '';
   showLoginForm: boolean = true;
+  //isAdmin boolean = false;
 
   constructor() {}
 
   login() {
     this.loginError = '';
     
-    if (this.email.value === 'test@gmail.com' && this.password.value === 'testpw') {
-      this.isLoading = true;
+    if (this.email.value === 'test@gmail.com' && this.password.value === 'penisz') {
+      // this.isLoading = true;
       this.showLoginForm = false;
       
       localStorage.setItem('isLoggedIn', 'true');
       
-      setTimeout(() => {
-        window.location.href = '/home';
-      }, 3000);
+      // setTimeout(() => {
+      //   
+      // }, 3000);
+      window.location.href = '/home';
     } else {
       this.loginError = 'Invalid email or password!';
     }

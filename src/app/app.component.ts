@@ -9,12 +9,15 @@ import { RouterLink } from '@angular/router';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { EsemenyekComponent } from './pages/esemenyek/esemenyek.component';
 import { TermekekComponent } from './pages/termekek/termekek.component';
+import { CartComponent } from './pages/cart/cart.component';
+import { CommonModule } from '@angular/common';
 
 
 
 @Component({
   selector: 'app-root',
   imports: [
+    CommonModule,
     RouterOutlet,
     MatSidenavModule,
     MatToolbarModule,
@@ -23,7 +26,7 @@ import { TermekekComponent } from './pages/termekek/termekek.component';
     MatFormFieldModule,
     RouterLink,
     MenuComponent,
-    MatToolbar
+    MatToolbar,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

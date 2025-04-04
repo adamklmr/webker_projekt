@@ -68,12 +68,16 @@ mat-sidenav {
         input {
           font-size: 14px;
         }
-    
-        #search-icon {
-          font-size: 0px;
+        #search-icon, #profile-icon, #cart-icon, #admin-icon {
+          display: none;
         }
       }
 
+}
+@media (min-width: 917px) {
+    .profile-sidenav,.login-sidenav,.logout-sidenav{
+        display: none;
+    }
 }
 .search-bar-container {
     display: flex;
@@ -115,6 +119,46 @@ mat-sidenav {
     gap: 20px;
     padding-right: 50px;
 
+}
+.dropdown {
+    position: relative;
+    display: flex;
+    .dropdown-toggle {
+        border: 1px solid black;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        margin-top: 2px;
+        
+        a {
+            display: flex;
+            font-size: 14px;
+            padding-left: 5px;
+            text-align: center;
+            color: black;
+            &:hover {
+                background: #f0f0f0;
+            }
+            max-height: 10px;
+        }
+    }
+
+    &:hover .dropdown-menu {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
 }
 #profile-icon{
     font-size: 25px;

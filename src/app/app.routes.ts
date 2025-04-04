@@ -26,12 +26,16 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/signup/signup.component').then(m => m.SignupComponent)
     },
     {
-        path: 'termekek',
+        path: 'products',
         loadComponent: () => import('./pages/termekek/termekek.component').then(m => m.TermekekComponent),
     },
     {
-        path: 'esemenyek',
+        path: 'events',
         loadComponent: () => import('./pages/esemenyek/esemenyek.component').then(m => m.EsemenyekComponent),
+    },
+    {
+        path: 'cart',
+        loadComponent: () => import('./pages/cart/cart.component').then(m => m.CartComponent),
     },
     {
         path: '',

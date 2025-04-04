@@ -19,17 +19,32 @@
         <ul class="menu-container">
           <li><a routerLink="/termekek">Termékek</a></li>
           <li><a routerLink="/esemenyek">Események</a></li>
+          @if (isLoggedIn) {
+          <li class="profile-sidenav"><a routerLink="/profile">Profil</a></li>
+          <li class="login-sidenav"><a routerLink="/login">Bejelentkezés</a></li>
+          }@else {
+          <li class="logout-sidenav"><a mat-list-item (click)="logout()">Kijelentkezés</a></li>
+          }
         </ul>
         <div class="search-bar-container">
           <input id="search-bar" type="search">
           <mat-icon id="search-icon">search</mat-icon>
         </div>
         <div class="icon-container">
-            <mat-icon id="profile-icon" routerLink="/profile">person</mat-icon>
+           <div class="dropdown">
+              <mat-icon id="profile-icon" routerLink="/profile">person</mat-icon>
+              <div class="dropdown-menu">
+                @if (!isLoggedIn){
+                  <a routerLink="/login">Bejelentkezés</a>
+                  <a routerLink="/signup">Regisztráció</a>
+                }@else{
+                  <a mat-list-item (click)="logout()">Kijelentkezés</a>
+                } 
+
+              </div>
+           </div>
             <mat-icon id="cart-icon" routerLink="/cart">shopping_cart</mat-icon>
-            <mat-icon id="admin-icon" routerLink="/admin">shield person</mat-icon>
-  
-          
+            <mat-icon id="admin-icon" routerLink="/admin">shield</mat-icon>
         </div>
       </nav>
     </mat-toolbar>
