@@ -10,6 +10,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { EsemenyekComponent } from './pages/esemenyek/esemenyek.component';
 import { TermekekComponent } from './pages/termekek/termekek.component';
 import { CartComponent } from './pages/cart/cart.component';
+import { AdminComponent } from './pages/admin/admin.component';
 import { CommonModule } from '@angular/common';
 
 

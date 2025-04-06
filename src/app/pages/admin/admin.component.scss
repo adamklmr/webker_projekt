@@ -1,0 +1,15 @@
+.allForm-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+}
+.product-form,.event-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}

@@ -12,7 +12,10 @@ export const routes: Routes = [
         path: 'home',
         loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent)
     },
-
+    {
+        path: 'admin',
+         loadComponent: () => import('./pages/admin/admin.component').then(m => m.AdminComponent),
+     },
     {
         path: 'profile',
         loadComponent: () => import('./pages/profile/profile.component').then(m => m.ProfileComponent)
@@ -37,6 +40,7 @@ export const routes: Routes = [
         path: 'cart',
         loadComponent: () => import('./pages/cart/cart.component').then(m => m.CartComponent),
     },
+    
     {
         path: '',
         redirectTo: 'home',

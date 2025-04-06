@@ -3,7 +3,17 @@ nav {
     width: 100%;
     justify-content: space-between;
 }
-
+.logo-container{
+    height: 64px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    img {
+       max-height: 100%;
+    }
+}
 .menu-container{
     display: flex;
     list-style: none;
@@ -64,7 +74,6 @@ mat-sidenav {
         width: 100px; // Kisebb szélesség
         padding: 4px 10px;
         justify-content: center;
-    
         input {
           font-size: 14px;
         }
@@ -140,17 +149,16 @@ mat-sidenav {
         border-radius: 5px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         margin-top: 2px;
-        
-        a {
+        .drop-item {
             display: flex;
-            font-size: 14px;
-            padding-left: 5px;
-            text-align: center;
+            font-size: 13px;
+            text-align: justify;
+            padding-left: 0px ;
             color: black;
             &:hover {
                 background: #f0f0f0;
             }
-            max-height: 10px;
+            max-height: 5px;
         }
     }
 
@@ -179,4 +187,5 @@ mat-sidenav {
     bottom: 0;
     width: 100%;
  }
+
   

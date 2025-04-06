@@ -12,9 +12,9 @@
         class="menu-toggle-button">
         <mat-icon>menu</mat-icon>
       </button>
-      <a routerLink="/home">
-        <img src="../assets/images/logo.png">
-      </a>
+        <a class="logo-container" routerLink="/home">
+          <img class="logo" src="logo2.png" alt="Logo">
+        </a>
       <nav> 
         <ul class="menu-container">
           <li><a routerLink="/termekek">Termékek</a></li>
@@ -35,10 +35,10 @@
               <mat-icon id="profile-icon" routerLink="/profile">person</mat-icon>
               <div class="dropdown-menu">
                 @if (!isLoggedIn){
-                  <a routerLink="/login">Bejelentkezés</a>
-                  <a routerLink="/signup">Regisztráció</a>
+                  <a class="drop-item" routerLink="/login">Bejelentkezés</a>
+                  <a class="drop-item" routerLink="/signup">Regisztráció</a>
                 }@else{
-                  <a mat-list-item (click)="logout()">Kijelentkezés</a>
+                  <a class="drop-item" mat-list-item (click)="logout()">Kijelentkezés</a>
                 } 
 
               </div>
