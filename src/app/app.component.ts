@@ -11,6 +11,8 @@ import { EsemenyekComponent } from './pages/esemenyek/esemenyek.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { CommonModule } from '@angular/common';
+import { ProductsComponent } from './pages/products/products.component';
+
 
 
 
@@ -25,7 +27,8 @@ import { CommonModule } from '@angular/common';
     MatIconModule,
     MatFormFieldModule,
     RouterLink,
-    MenuComponent
+    MenuComponent,
+    
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

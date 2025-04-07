@@ -18,7 +18,7 @@ export const ProfileObject = [
       }
 ];
 
-export const ProductsObject = [
+export const ProductObject = [
     {
         'id': 1,
         'name': 'Orso',
@@ -38,7 +38,7 @@ export const ProductsObject = [
         'description': 'Egy nagyon szép ruhadarab, ami mindenki kedvence!'
     }
 ];
-export const EventsObject = [
+export const EventObject = [
     {
         'id': 3,
         'name': 'Horgászat',
