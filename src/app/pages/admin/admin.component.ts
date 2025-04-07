@@ -126,12 +126,14 @@ events: Event[] = [
       
       this.products = [...this.products, newProduct];
       this.productAdded.emit(newProduct);
+      this.productForm.reset();
     } else {
       Object.keys(this.productForm.controls).forEach(key => {
         const control = this.productForm.get(key);
         control?.markAsTouched();
       });
     }
+
   }
 
   addEvent() {
@@ -149,6 +151,7 @@ events: Event[] = [
       
       this.events = [...this.events, newEvent];
       this.eventAdded.emit(newEvent);
+      this.eventForm.reset();
     } else {
       Object.keys(this.eventForm.controls).forEach(key => {
         const control = this.eventForm.get(key);

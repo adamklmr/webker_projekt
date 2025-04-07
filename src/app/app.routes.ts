@@ -1,11 +1,4 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { ProfileComponent } from './pages/profile/profile.component';
-import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
-import { SignupComponent } from './pages/signup/signup.component';
-import { LoginComponent } from './pages/login/login.component';
-import { CartComponent } from './pages/cart/cart.component';
-import { AdminComponent } from './pages/admin/admin.component';
 
 export const routes: Routes = [
     {
@@ -30,7 +23,7 @@ export const routes: Routes = [
     },
     {
         path: 'products',
-        loadComponent: () => import('./pages/termekek/termekek.component').then(m => m.TermekekComponent),
+        loadComponent: () => import('./pages/products/products.component').then(m => m.ProductsComponent),
     },
     {
         path: 'events',
