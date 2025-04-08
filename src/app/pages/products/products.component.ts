@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatCardModule } from '@angular/material/card';
+import { MatCardModule, MatCardTitleGroup } from '@angular/material/card';
 import { Product, ProductObject } from '../../shared/models/Product';
 import { MatButtonModule } from '@angular/material/button';
 
@@ -11,7 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     CommonModule, 
     MatCardModule,
-    MatButtonModule            
+    MatButtonModule,            
   ],
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']

@@ -27,7 +27,7 @@ export const routes: Routes = [
     },
     {
         path: 'events',
-        loadComponent: () => import('./pages/esemenyek/esemenyek.component').then(m => m.EsemenyekComponent),
+        loadComponent: () => import('./pages/events/events.component').then(m => m.EventsComponent),
     },
     {
         path: 'cart',

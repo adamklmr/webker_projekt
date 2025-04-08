@@ -7,11 +7,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { EsemenyekComponent } from './pages/esemenyek/esemenyek.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { CommonModule } from '@angular/common';
 import { ProductsComponent } from './pages/products/products.component';
+import { EventsComponent } from './pages/events/events.component';
 
 
 

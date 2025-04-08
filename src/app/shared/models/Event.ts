@@ -4,6 +4,7 @@ export interface Event {
     startDate: Date;
     endDate: Date;
     location: string;
+    pic: string;
     description?: string;
   }
 
@@ -14,6 +15,7 @@ export interface Event {
         'startDate': new Date('2023-09-01'),
         'endDate': new Date('2023-09-09'),
         'location': 'Tópart',
+        'pic': '../../../assets/images/events/horgaszat.jpeg',
         'description': 'Egy szuper horgásztúra!'
     },
     {
@@ -22,6 +24,7 @@ export interface Event {
         'startDate': new Date('2024-09-01'),
         'endDate': new Date('2024-09-09'),
         'location': 'Tópart',
+        'pic': '../../../assets/images/events/verseny.jpg',
         'description': 'Egy izgalmas horgászverseny!'
     }
 ];

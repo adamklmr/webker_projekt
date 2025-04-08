@@ -74,6 +74,7 @@ events: Event[] = [
     startDate: new Date('2023-09-01'),
     endDate: new Date('2023-09-09'),
     location: 'Tópart',
+    pic: '',
     description: 'Egy szuper horgásztúra!'
   },
   {
@@ -82,6 +83,7 @@ events: Event[] = [
     startDate: new Date('2024-09-01'),
     endDate: new Date('2024-09-09'),
     location: 'Tópart',
+    pic: '',
     description: 'Egy izgalmas horgászverseny!'
   }
 ];
@@ -147,6 +149,7 @@ events: Event[] = [
         startDate: formValue.eventStartDate,
         endDate: formValue.eventEndDate,
         location: formValue.eventLocation,
+        pic: formValue.eventImage,
         description: formValue.eventDescription,
       };
       
