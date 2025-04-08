@@ -1,2 +1,23 @@
-
-<p>penisz</p>
+<h1>Az oldalon található öszes termék   </h1>
+<div class="products-container">
+@for (product of ProductObject; track $index) {
+    <div class="product-card">
+        <mat-card>
+            <img mat-card-image [src]="ProductObject[$index].pic" alt="{{ProductObject[$index].name}}">
+            <mat-card-header>
+                <mat-card-title>{{ProductObject[$index].name}}</mat-card-title>
+                <!-- <mat-card-subtitle>{{ProductObject[$index].category}}</mat-card-subtitle> -->
+              </mat-card-header>
+            <div class="overlay">
+                <mat-card-content>
+                    <p>{{ProductObject[$index].description}}</p>
+                    <p><strong>Ár:</strong> {{ProductObject[$index].price}} Ft</p>
+                  </mat-card-content>
+                  <mat-card-actions>
+                    <button mat-flat-button>Kosárba</button>
+                  </mat-card-actions>
+            </div>
+        </mat-card>
+      </div>
+}
+</div>

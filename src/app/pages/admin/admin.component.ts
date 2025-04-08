@@ -13,6 +13,7 @@ import { provideNativeDateAdapter } from '@angular/material/core';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatButton, MatButtonModule } from '@angular/material/button';
 @Component({
   selector: 'app-admin',
   standalone: true,
@@ -31,6 +32,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatIconModule,
     MatTableModule,
     MatCheckboxModule,
+    MatButtonModule
   ]
 })
 export class AdminComponent implements OnInit {
