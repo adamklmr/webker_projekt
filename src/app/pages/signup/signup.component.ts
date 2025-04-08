@@ -59,6 +59,7 @@ export class SignupComponent {
     this.showForm = false;
 
     const newUser: User = {
+      id: Math.random().toString(36).substring(2, 15),
       name: {
         firstname: this.signUpForm.value.name?.firstname || '',
         lastname: this.signUpForm.value.name?.lastname || ''
