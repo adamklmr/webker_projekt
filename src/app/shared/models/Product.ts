@@ -1,7 +1,7 @@
 export interface Product {
     id: number;
     name: string;
-    category: 'Botok' | 'Orsók' | 'Szerelékek' | 'Ruházat';
+    category: string;
     instock: boolean;
     price: number;
     pic: string;

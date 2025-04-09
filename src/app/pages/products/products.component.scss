@@ -1,18 +1,17 @@
 // products.component.scss
-
-:host {
-    display: block;
-    padding: 1rem;
+.product-page-container{
+    height: 90vh;
+    //border: 1px solid black;
 }
-
 .products-container {
     display: flex;
     // flex-wrap: wrap;
     gap: 1em;
     align-items:flex-start;
-    border: 1px solid black;
-    justify-content: center;
+    // border: 1px solid black;
+    justify-content: flex-start;
     // height: 80vh;
+    margin-left: 10%;
 }
 
 .product-card:hover .overlay {

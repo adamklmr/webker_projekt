@@ -18,11 +18,11 @@ import { MatButtonModule } from '@angular/material/button';
 })
 
 export class ProductsComponent implements OnInit {
-  ProductObject = ProductObject; // A termékek tömbje
+  ProductObject = ProductObject; // ProA termékek tömbje
   selectedIndex: number = 0; // Alapértelmezésben az első termék indexe
 
   ngOnInit(): void {
-    
+
   }
 
   reload(index: number): void {
