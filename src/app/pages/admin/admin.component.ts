@@ -1,5 +1,5 @@
 import { Component, OnInit,Input,Output,EventEmitter} from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, CurrencyPipe } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup,Validators } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -14,6 +14,10 @@ import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButton, MatButtonModule } from '@angular/material/button';
+import { CurrencyPipePipe } from '../../shared/pipes/currency.pipe.pipe';
+import { DateFormatterPipe } from '../../shared/pipes/date.pipe';
+
+
 @Component({
   selector: 'app-admin',
   standalone: true,
@@ -32,7 +36,9 @@ import { MatButton, MatButtonModule } from '@angular/material/button';
     MatIconModule,
     MatTableModule,
     MatCheckboxModule,
-    MatButtonModule
+    MatButtonModule,
+    CurrencyPipePipe,
+    DateFormatterPipe
   ]
 })
 export class AdminComponent implements OnInit {
