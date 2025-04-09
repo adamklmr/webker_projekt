@@ -19,7 +19,7 @@ import { MatInputModule } from '@angular/material/input';
     MatButtonModule,      
     FormsModule,
     MatFormFieldModule,
-    MatLabel,
+    
     MatOptionModule,
     MatInputModule
   ],
