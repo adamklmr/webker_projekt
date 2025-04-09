@@ -19,7 +19,7 @@ import { MatTableModule } from '@angular/material/table';
 })
 export class CartComponent {
   ProductObject = ProductObject; // A termékek tömbje
-  ProductsdisplayedColumns = ['pic', 'name', 'category', 'description','quantity','actions','price']; // Az oszlopok, amiket meg akarunk jeleníteni a táblázatban
+  ProductsdisplayedColumns = ['pic', 'name', 'category', 'description','quantity','price','actions']; // Az oszlopok, amiket meg akarunk jeleníteni a táblázatban
 
   products: Product[] = ProductObject;
 

@@ -129,6 +129,15 @@ mat-sidenav {
     padding-right: 50px;
 
 }
+#cart-icon:hover {
+    cursor: pointer;
+}
+#profile-icon:hover {
+    cursor: pointer;
+}
+#admin-icon:hover {
+    cursor: pointer;
+}
 .dropdown {
     position: relative;
     display: flex;

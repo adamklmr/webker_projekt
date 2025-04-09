@@ -1,3 +1,5 @@
+
+
 .profile-container {
     max-width: 800px;
     margin: 20px auto;
@@ -28,12 +30,12 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-color: #e8eaf6;
+    background-color: #8ac2cf;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 32px;
-    color: #3f51b5;
+    color: #438797;
   }
   
   .user-details {
@@ -92,7 +94,7 @@
     }
     
     mat-icon {
-      color: #5a4af7;
+      color: #438797;
     }
   }
   
@@ -114,7 +116,7 @@
       .completion-value {
         font-size: 20px;
         font-weight: 500;
-        color: #5a4af7;
+        color: #438797;
       }
     }
     

@@ -32,7 +32,10 @@
         </div>
         <div class="icon-container">
            <div class="dropdown">
+            @if (isLoggedIn) {
               <mat-icon id="profile-icon" routerLink="/profile">person</mat-icon>
+            }
+            @else {<mat-icon id="profile-icon" routerLink="/login">person</mat-icon>}
               <div class="dropdown-menu">
                 @if (!isLoggedIn){
                   <a class="drop-item" routerLink="/login">Bejelentkezés</a>

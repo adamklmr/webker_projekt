@@ -19,51 +19,29 @@
             </div>
           </div>
         </div>
-<!--         
+
+
         <div class="stats-section">
           <h2>Task Statistics</h2>
           
           <div class="stats-cards">
             <mat-card class="stat-card">
-              <mat-card-header>
+                <mat-card-header>
                 <mat-icon mat-card-avatar>assignment</mat-icon>
-                <mat-card-title>{{ProfileObject[selectedIndex].tasks.total}}</mat-card-title>
-                <mat-card-subtitle>Total Tasks</mat-card-subtitle>
+                <mat-card-title>{{ProfileObject[selectedIndex].ordersNumber}}</mat-card-title>
+                <mat-card-subtitle>Rendelések száma</mat-card-subtitle>
               </mat-card-header>
             </mat-card>
             
             <mat-card class="stat-card">
               <mat-card-header>
                 <mat-icon mat-card-avatar>done_all</mat-icon>
-                <mat-card-title>{{ProfileObject[selectedIndex].tasks.completed}}</mat-card-title>
-                <mat-card-subtitle>Completed</mat-card-subtitle>
+                <mat-card-title>{{ProfileObject[selectedIndex].eventsNumber}}</mat-card-title>
+                <mat-card-subtitle>Események száma</mat-card-subtitle>
               </mat-card-header>
             </mat-card>
-            
-            <mat-card class="stat-card">
-              <mat-card-header>
-                <mat-icon mat-card-avatar>pending</mat-icon>
-                <mat-card-title>{{ProfileObject[selectedIndex].tasks.pending}}</mat-card-title>
-                <mat-card-subtitle>Pending</mat-card-subtitle>
-              </mat-card-header>
-            </mat-card>
-          </div>
-          
-          <mat-card class="completion-card">
-            <mat-card-content>
-              <div class="completion-header">
-                <h3>Completion Rate</h3>
-                <div class="completion-value">
-                  {{(ProfileObject[selectedIndex].tasks.completed / ProfileObject[selectedIndex].tasks.total * 100).toFixed(2)}}%
-                </div>
-              </div>
-              <mat-progress-bar
-                mode="determinate"
-                [value]="ProfileObject[selectedIndex].tasks.completed / ProfileObject[selectedIndex].tasks.total * 100">
-              </mat-progress-bar>
-            </mat-card-content>
-          </mat-card>
-        </div> -->
+        </div>
+      </div> <!-- Closing the stats-cards div -->
       </mat-card-content>
     </mat-card>
   </div>

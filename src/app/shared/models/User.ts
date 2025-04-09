@@ -1,5 +1,7 @@
 import { first } from "rxjs";
 import { Product } from "./Product";
+import { ProductsComponent } from "../../pages/products/products.component";
+import { eventNames } from "process";
 
 export interface User {
     id: string;
@@ -11,7 +13,8 @@ export interface User {
     user_name?: string;
     email: string;
     password: string;
-    products?: Product[];
+    ordersNumber: number;
+    eventsNumber: number;
 }
   export const ProfileObject = [
     {
@@ -22,9 +25,12 @@ export interface User {
       user_name: "marokmarton",
       email: "marok@gamil.com",
       password: "marok1",
+      ordersNumber: 2,
+      eventsNumber: 1,
     },
     {
       id: "2",
+      avatar: "A",
       firstname: "Admin",
       lastname: "Péter",
       user_name: "adminuser",

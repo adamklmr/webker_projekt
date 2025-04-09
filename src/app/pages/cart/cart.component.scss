@@ -15,16 +15,18 @@
     height: 100%;
 }
 table {
-    background-color: #ebebeb;
+    background-color: white;
     //  border: 1px solid black;
     display: block;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
 }
 img{
+    margin-top: 5px;
     width: 100px;
-    border: 0.5px solid black;
+    // border: 0.5px solid black;
     border-radius: 5px;
 }
 .total-container{
@@ -39,4 +41,7 @@ img{
     display: flex;
     //border: 1px solid black;
 }
-
+#quantity-input{
+    background-color: white;
+    border: 1px solid black;
+}

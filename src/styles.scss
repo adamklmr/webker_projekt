@@ -1,12 +1,26 @@
+@use '@angular/material' as mat;
+
+:root {
+  @include mat.sidenav-overrides((
+    content-background-color: 	#d1eaf2,
+    container-text-color: #438797,
+  ));
+  @include mat.button-overrides((
+    filled-container-color: 	#438797,
+    filled-label-text-color: white,
+  ));
+  @include mat.table-overrides((
+    background-color: #58a7b3,
+  ));
+
+  @include mat.icon-overrides((
+    color: #438797,
+  ));
+}
 body {
   margin: 0 !important;
 }
-html, body { height: 100%; 
-
-}
-body { 
-  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: black;
-}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
 
 
