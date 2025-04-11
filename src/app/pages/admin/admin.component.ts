@@ -16,6 +16,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { CurrencyPipePipe } from '../../shared/pipes/currency.pipe.pipe';
 import { DateFormatterPipe } from '../../shared/pipes/date.pipe';
+import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 
 
 @Component({
@@ -38,7 +39,8 @@ import { DateFormatterPipe } from '../../shared/pipes/date.pipe';
     MatCheckboxModule,
     MatButtonModule,
     CurrencyPipePipe,
-    DateFormatterPipe
+    DateFormatterPipe,
+    MatPaginatorModule
   ]
 })
 export class AdminComponent implements OnInit {

@@ -2,7 +2,7 @@
 
 :root {
   @include mat.sidenav-overrides((
-    content-background-color: 	#d1eaf2,
+    content-background-color: 	white,
     container-text-color: #438797,
   ));
   @include mat.button-overrides((
@@ -10,11 +10,16 @@
     filled-label-text-color: white,
   ));
   @include mat.table-overrides((
-    background-color: #58a7b3,
+    background-color: white,
+    header-headline-color: black,
   ));
 
   @include mat.icon-overrides((
     color: #438797,
+  ));
+  @include mat.paginator-overrides((
+    container-text-color: white,
+    container-background-color: #58a7b3,
   ));
 }
 body {

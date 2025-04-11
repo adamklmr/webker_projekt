@@ -31,7 +31,9 @@
         @for (event of EventObject; track $index) {
             <div class="event-card">
                 <mat-card>
+                    <div class="event-image">
                     <img mat-card-image [src]="EventObject[$index].pic" alt="{{EventObject[$index].name}}">
+                    </div>
                     <mat-card-header>
                         <mat-card-title>{{EventObject[$index].name}}</mat-card-title>
                       </mat-card-header>

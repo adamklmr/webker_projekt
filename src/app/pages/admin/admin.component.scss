@@ -1,3 +1,6 @@
+h2{
+    text-align: center;
+}
 .allForm-container{
     display: flex;
     flex-direction: row;
@@ -13,4 +16,16 @@
     flex-direction: column;
     gap: 10px;
     margin-bottom: 20px;
+}
+.list-category{
+    margin-left: 20px;
+}
+.table-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.list-container{
+    border: 1px solid black;
 }

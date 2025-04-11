@@ -72,19 +72,21 @@
       </form>
     </div>
 </div>
+<div class="list-category">
+<form [formGroup]="form">
+  <mat-form-field appearance="outline" class="category-select-table">
+    <mat-label>Listázandó elemek</mat-label>
+    <mat-select formControlName="listingItem">
+      <mat-option value="products">Termékek</mat-option>
+      <mat-option value="events">Események</mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>
+</div>
 <div class="table-container">
-  <form [formGroup]="form">
-    <mat-form-field appearance="outline" class="category-select">
-      <mat-label>Listázandó elemek</mat-label>
-      <mat-select formControlName="listingItem">
-        <mat-option value="products">Termékek</mat-option>
-        <mat-option value="events">Események</mat-option>
-      </mat-select>
-    </mat-form-field>
-  </form>
         @if (form.get('listingItem')?.value === 'products') {
         <h2>Product List</h2>
-      <div class="product-list-container">
+      <div class="list-container">
         <table mat-table [dataSource]="products" class="mat-elevation-z8">
           <ng-container matColumnDef="instock">
             <th mat-header-cell *matHeaderCellDef>Stock</th>
@@ -119,11 +121,15 @@
           <tr mat-header-row *matHeaderRowDef="ProductsdisplayedColumns"></tr>
           <tr mat-row *matRowDef="let row; columns: ProductsdisplayedColumns;"></tr>
         </table>
+        <mat-paginator [pageSizeOptions]="[1, 10, 20]"
+                 showFirstLastButtons
+                 aria-label="Select page of periodic elements">
+  </mat-paginator>
       </div>
     }
     @if (form.get('listingItem')?.value === 'events') {
-          <h2>Event List</h2>
-          <div class="event-list-container">
+          <h2 class="list-h2">Event List</h2>
+          <div class="list-container">
             <table mat-table [dataSource]="events" class="mat-elevation-z8">
               <ng-container matColumnDef="name">
                 <th mat-header-cell *matHeaderCellDef> Name </th>
@@ -153,6 +159,10 @@
               <tr mat-header-row *matHeaderRowDef="EventsdisplayedColumns"></tr>
               <tr mat-row *matRowDef="let row; columns: EventsdisplayedColumns;"></tr>
             </table>
+            <mat-paginator [pageSizeOptions]="[1, 10, 20]"
+                 showFirstLastButtons
+                 aria-label="Select page of periodic elements">
+  </mat-paginator>
           </div>
         }
 </div>

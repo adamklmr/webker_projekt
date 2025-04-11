@@ -15,7 +15,7 @@ export interface Event {
         'startDate': new Date('2023-09-01'),
         'endDate': new Date('2023-09-09'),
         'location': 'Tópart',
-        'pic': '../../../assets/images/events/horgaszat.jpeg',
+        'pic': '../../../assets/images/events/horgaszat.jpg',
         'description': 'Egy szuper horgásztúra!'
     },
     {
