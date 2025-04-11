@@ -19,8 +19,8 @@
     background-color: white;
     flex-direction: column;
     justify-content: space-between;
-    //border: 5px solid black ;
-    border-radius: 12px;
+    // border: 5px solid black ;
+    
 }
 img{
     max-height: 300px;
@@ -38,3 +38,8 @@ img{
         width: 100%;
     }
 }
+.disabled-button {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+  }

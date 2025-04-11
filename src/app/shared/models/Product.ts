@@ -10,7 +10,7 @@ export interface Product {
   export const ProductObject = [
     {
       'id': 1,
-      'name': 'Orso',
+      'name': 'Orsó',
       'category': 'Orsók',
       'instock': true,
       'price': 12000,

@@ -12,7 +12,7 @@ export interface Event {
     {
         'id': 3,
         'name': 'Horgászat',
-        'startDate': new Date('2023-09-01'),
+        'startDate': new Date('2025-09-01'),
         'endDate': new Date('2023-09-09'),
         'location': 'Tópart',
         'pic': '../../../assets/images/events/horgaszat.jpg',

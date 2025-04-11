@@ -54,22 +54,22 @@ export class ProductsComponent implements OnInit {
       this.filteredProducts = [...this.ProductObject];
     }
   }
-  maxPrize(): void {
-    console.log('Max Price:', this.maxPrice);
-    if (this.maxPrice !== null && !isNaN(this.maxPrice)) {
-      this.filteredProducts = this.ProductObject.filter(product => product.price <= this.maxPrice);
-    } else {
-      this.filteredProducts = [...this.ProductObject];
-    }
-  }
-  selectedCategory(category: string): void {
-    if (category) {
-      this.filteredProducts = this.ProductObject.filter(product => product.category === category);
-      console.log('Selected Category:', category);
-    } else {
-      this.filteredProducts = [...this.ProductObject];
-    }
-  }
+  // maxPrize(): void {
+  //   console.log('Max Price:', this.maxPrice);
+  //   if (this.maxPrice !== null && !isNaN(this.maxPrice)) {
+  //     this.filteredProducts = this.ProductObject.filter(product => product.price <= this.maxPrice);
+  //   } else {
+  //     this.filteredProducts = [...this.ProductObject];
+  //   }
+  // }
+  // selectedCategory(category: string): void {
+  //   if (category) {
+  //     this.filteredProducts = this.ProductObject.filter(product => product.category === category);
+  //     console.log('Selected Category:', category);
+  //   } else {
+  //     this.filteredProducts = [...this.ProductObject];
+  //   }
+  // }
 
 }
 

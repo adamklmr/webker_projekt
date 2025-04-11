@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef} from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCard, MatCardModule,MatCardTitleGroup } from '@angular/material/card';
 import { EventObject } from '../../shared/models/Event';
+
 
 
 
@@ -18,11 +19,14 @@ import { EventObject } from '../../shared/models/Event';
   styleUrl: './events.component.scss'
 })
 export class EventsComponent implements OnInit {
+  constructor(private cdr: ChangeDetectorRef) {}
   EventObject = EventObject; // Az események tömbje
   selectedIndex: number = 0;
 
-  ngOnInit(): void {
-
+  ngOnInit(): void {}
+  hasStarted(eventStartDate: Date): boolean {
+    const now = new Date();
+    return new Date(eventStartDate) < now;
   }
 
 reload(index: number): void {

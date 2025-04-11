@@ -10,12 +10,15 @@
               </mat-card-header>
                 <mat-card-content>
                     <p>{{EventObject[$index].description}}</p>
-                    <p><strong>Helyszín:</strong> {{EventObject[$index].location}} Ft</p>
+                    <p><strong>Helyszín:</strong> {{EventObject[$index].location}}</p>
                     <p><strong>Kezdés:</strong> {{EventObject[$index].startDate | date:'short'}}</p>
                     <p><strong>Vége:</strong> {{EventObject[$index].endDate | date:'short'}}</p>
                   </mat-card-content>
                   <mat-card-actions>
-                    <button mat-flat-button>Érdekel</button>
+                    <button mat-flat-button
+                    [ngClass]="{ 'disabled-button': hasStarted(event.startDate) }" 
+                    [disabled]="hasStarted(event.startDate)">
+                      Érdekel</button>
                   </mat-card-actions>
         </mat-card>
     </div>
