@@ -33,7 +33,7 @@
           <textarea matInput formControlName="productDescription" required></textarea>
         </mat-form-field>
 
-        <button mat-raised-button type="submit">Add Product</button>
+        <button mat-raised-button style="background-color: #58a7b3; color: white;" type="submit">Add Product</button>
       </form>
   </div>
 
@@ -68,7 +68,7 @@
           <mat-label>Description</mat-label>
           <textarea matInput formControlName="eventDescription" required></textarea>
         </mat-form-field>
-        <button mat-raised-button color="primary" type="submit">Add Event</button>
+        <button mat-raised-button style="background-color: #58a7b3; color: white;" type="submit">Add Event</button>
       </form>
     </div>
 </div>
@@ -121,7 +121,7 @@
           <tr mat-header-row *matHeaderRowDef="ProductsdisplayedColumns"></tr>
           <tr mat-row *matRowDef="let row; columns: ProductsdisplayedColumns;"></tr>
         </table>
-        <mat-paginator [pageSizeOptions]="[1, 10, 20]"
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]"
                  showFirstLastButtons
                  aria-label="Select page of periodic elements">
   </mat-paginator>

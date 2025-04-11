@@ -1,3 +1,4 @@
+
 <header>
   <mat-sidenav-container>
     <mat-sidenav #sidenav>
@@ -47,7 +48,12 @@
 
               </div>
            </div>
+           @if (isLoggedIn) {
             <mat-icon id="cart-icon" routerLink="/cart">shopping_cart</mat-icon>
+           }
+           @else {
+            <mat-icon id="cart-icon" routerLink="/login">shopping_cart</mat-icon>
+           }
             @if (isAdmin) {
               <mat-icon id="admin-icon" routerLink="/admin">shield</mat-icon>
             }
@@ -60,5 +66,5 @@
 </header>
 
 <footer>
-  <p>&copy; 2025 Goldfish Horgászbolt</p>
+  <p>&copy; 2025 Goldfish Shop</p>
 </footer>

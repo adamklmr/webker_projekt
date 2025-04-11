@@ -21,6 +21,15 @@
     container-text-color: white,
     container-background-color: #58a7b3,
   ));
+  @include mat.select-overrides((
+    panel-background-color: #58a7b3,
+    focused-arrow-color: #58a7b3,
+    invalid-arrow-color: #58a7b3,
+  ));
+  @include mat.checkbox-overrides((
+    selected-icon-color: #58a7b3,
+    selected-hover-icon-color: #438797,
+  ));
 }
 body {
   margin: 0 !important;

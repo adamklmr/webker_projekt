@@ -1,8 +1,8 @@
 <div class="cart-page-container">
 <h1>A te kosarad</h1>
 <div class="cart-container">
+    <div class="product-container">
     <table mat-table [dataSource]="products" class="mat-elevation-z8">
-        <div class="product-container">
         <ng-container matColumnDef="pic" >
             <th mat-header-cell *matHeaderCellDef> Kép </th>
             <td mat-cell *matCellDef="let product"> <img mat-card-image [src]="product.pic" alt="{{product.name}}"> </td>
@@ -29,72 +29,38 @@
           </ng-container>
 
         <ng-container matColumnDef="price">
-            <th mat-header-cell *matHeaderCellDef> Price </th>
+            <th mat-header-cell *matHeaderCellDef> Ár </th>
               <td mat-cell *matCellDef="let product"> {{ product.price | currency:'HUF':'symbol':'1.0-0' }} </td>
           </ng-container>
           <ng-container matColumnDef="actions">
             <th mat-header-cell *matHeaderCellDef>  </th>
             <td mat-cell *matCellDef="let product; let i = index">
-                <button mat-flat-button color="warn" (click)="removeFromCart(i)">Remove</button>
+                <button mat-flat-button color="warn" (click)="removeFromCart(i)">Törlés</button>
             </td>
         </ng-container>
           <tr mat-header-row *matHeaderRowDef="ProductsdisplayedColumns"></tr>
           <tr mat-row *matRowDef="let row; columns: ProductsdisplayedColumns;"></tr>
-        </div>
     </table>
-    <!-- @for (product of P</div>roductObject; track $index) {
-    <div class="table-container">
-    <table mat-table [dataSource]="products">
-        <div class="product-container">
-        <ng-container matColumnDef="Kép">
-            <th mat-header-cell *matHeaderCellDef> Kép </th>
-            <img mat-card-image [src]="ProductObject[$index].pic" alt="{{ProductObject[$index].name}}">
-        </ng-container>
-        <ng-container matColumnDef="name">
-            <th mat-header-cell *matHeaderCellDef> Név </th>
-            <mat-card-title>{{ProductObject[$index].name}}</mat-card-title>
-        </ng-container>
-        <ng-container matColumnDef="category">
-            <th mat-header-cell *matHeaderCellDef> Kategória </th>
-            <mat-card-subtitle>{{ProductObject[$index].category}}</mat-card-subtitle>
-        </ng-container>
-        <ng-container matColumnDef="description">
-        <th mat-header-cell *matHeaderCellDef> Leírás </th>
-            <mat-card-content>
-                <p>{{ProductObject[$index].description}}</p>
-            </mat-card-content>
-        </ng-container>
-        <ng-container matColumnDef="price">
-            <mat-card-content>
-                <th mat-header-cell *matHeaderCellDef> Ár </th>
-                <p><strong>Ár:</strong> {{ProductObject[$index].price}} Ft</p>
-            </mat-card-content>
-        </ng-container>
-        <ng-container class="quantity-container" matColumnDef="quantity">
-            <mat-card-content>
-                <th mat-header-cell *matHeaderCellDef> Mennyiség </th>
-                <input type="number"  min="1" max="10">
-            </mat-card-content>
-        </ng-container>
-        <ng-container matColumnDef="actions">
-            <mat-card-actions>
-                <button mat-flat-button (click)="removeFromCart($index)">Törlés</button>
-            </mat-card-actions>
-        </ng-container>
-        <tr mat-header-row *matHeaderRowDef="ProductsdisplayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: ProductsdisplayedColumns;"></tr>
-        </div>
-      </table>
     </div>
-    } -->
     <div class="total-container">
-        <h2>Total:</h2>
+        <div class="coupon-container">
+            <form class="coupon-form">
+                <mat-form-field class="coupon-full-width">
+                  <mat-label>Kuponkód</mat-label>
+                  <input matInput placeholder="Írd ide a kuponod"
+                  [(ngModel)]="couponCode"
+                  name="couponCode">
+                </mat-form-field>
+              </form>
+                <button mat-raised-button style="background-color: #58a7b3; color: white;" class="apply-coupon-button"
+                (click)="applyCoupon()"
+                >Kupon alkalmazása</button>
+        </div> 
+        <h2>Végösszeg:</h2>
         <p>
-          {{getTotalPrice() | currency:'HUF ':'symbol':'1.0-0' }}
+          {{discountedPrice |  currencyPipe }}
         </p>
-    </div>
-    <div class="checkout">
-    <button mat-raised-button color="primary" (click)="checkout()" class="checkout-button">Checkout</button>
+        <button mat-raised-button style="background-color: #58a7b3; color: white;" (click)="checkout()" class="checkout-button">Fizetés</button>
     </div>
 </div>
 </div>
