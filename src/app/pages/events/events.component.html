@@ -11,8 +11,8 @@
                 <mat-card-content>
                     <p>{{EventObject[$index].description}}</p>
                     <p><strong>Helyszín:</strong> {{EventObject[$index].location}}</p>
-                    <p><strong>Kezdés:</strong> {{EventObject[$index].startDate | date:'short'}}</p>
-                    <p><strong>Vége:</strong> {{EventObject[$index].endDate | date:'short'}}</p>
+                    <p><strong>Kezdés:</strong> {{EventObject[$index].startDate | date:'yyyy-MM-dd'}}</p>
+                    <p><strong>Vége:</strong> {{EventObject[$index].endDate |date:'yyyy-MM-dd'}}</p>
                   </mat-card-content>
                   <mat-card-actions>
                     <button mat-flat-button

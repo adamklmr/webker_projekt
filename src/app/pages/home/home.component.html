@@ -16,7 +16,7 @@
                     <div class="overlay">
                         <mat-card-content>
                             <p>{{ProductObject[$index].description}}</p>
-                            <p><strong>Ár:</strong> {{ProductObject[$index].price}} Ft</p>
+                            <p><strong>Ár:</strong> {{ProductObject[$index].price | currencyPipe}}</p>
                           </mat-card-content>
                           <mat-card-actions>
                             <button mat-flat-button>Kosárba</button>
@@ -44,7 +44,9 @@
                             <p><strong>Vége:</strong> {{EventObject[$index].endDate | date:'short'}}</p>
                           </mat-card-content>
                           <mat-card-actions>
-                            <button mat-flat-button>Érdekel</button>
+                            <button mat-flat-button
+                            [ngClass]="{ 'disabled-button': hasStarted(event.startDate) }" 
+                            [disabled]="hasStarted(event.startDate)">Érdekel</button>
                           </mat-card-actions>
                 </mat-card>
             </div>

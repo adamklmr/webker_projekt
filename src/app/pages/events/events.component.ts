@@ -3,6 +3,7 @@ import { Component, OnInit, ChangeDetectorRef} from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCard, MatCardModule,MatCardTitleGroup } from '@angular/material/card';
 import { EventObject } from '../../shared/models/Event';
+import { DateFormatterPipe } from '../../shared/pipes/date.pipe';
 
 
 
