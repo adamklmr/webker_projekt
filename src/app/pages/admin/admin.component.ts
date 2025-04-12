@@ -48,6 +48,7 @@ export class AdminComponent implements OnInit {
   @Output() productAdded = new EventEmitter<Product>();
   @Output() eventAdded = new EventEmitter<Event>();
 
+
   ProductsdisplayedColumns: string[] = ['instock','name', 'category','price','description'];
   EventsdisplayedColumns: string[] = ['name', 'startDate','endDate', 'location', 'description'];
 
@@ -58,21 +59,21 @@ export class AdminComponent implements OnInit {
 products: Product[] = [
   {
     id: 1,
-    name: 'ORso',
-    category: 'Orsók',
+    name: 'Orsó',
+    category: 'Felszerelés',
     instock: true,
-    price: 1200,
+    price: 12000,
     pic: '',
-    description: 'Nagyon menő oro termék, ami mindenki kedvence!'
+    description: 'Carp Expert Uni Runner 6000 nyeletőfékes orsó'
   },
   {
     id: 2,
-    name: 'Ruhadarab',
+    name: 'Vízálló ruha',
     category: 'Ruházat',
     instock: true,
     price: 8000,
     pic: '',
-    description: 'Egy nagyon szép ruhadarab, ami mindenki kedvence!'
+    description: 'Terepmintás vízálló ruha'
   }
 ];
 events: Event[] = [

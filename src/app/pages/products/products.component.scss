@@ -42,10 +42,10 @@
     // border: 1px solid black;
     justify-content: flex-start;
     // height: 80vh;
-    margin-left: 10%;
     padding: 20px;
     width: fit-content;
     background-color: #f0f0f0;
+    justify-content: center;
 }
 
 .product-card:hover .overlay {
@@ -65,8 +65,11 @@
     cursor: pointer;
 }
 .product-image{
+    // border: 1px solid red;
+    width: 100%;
     display: flex;
     border-radius: 12px;
+    justify-content: center;
 }
 .card-header{
    display: flex;

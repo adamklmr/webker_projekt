@@ -15,16 +15,16 @@ export interface Product {
       'instock': true,
       'price': 12000,
       'pic': '../../../assets/images/products/orso.jpg',
-      'description': 'Nagyon menő orso termék, ami mindenki kedvence!'
+      'description': 'Carp Expert Uni Runner 6000 nyeletőfékes orsó'
     },
     {
       'id': 2,
-      'name': 'Ruhadarab',
+      'name': 'Vízálló ruha',
       'category': 'Ruházat',
       'instock': true,
-      'price': 8000,
+      'price': 20000,
       'pic': '../../../assets/images/products/ruha.jpg',
-      'description': 'Egy nagyon szép ruhadarab, ami mindenki kedvence!'
+      'description': 'Terepmintás vízálló ruha'
     }
     ,
     {
@@ -35,5 +35,35 @@ export interface Product {
       'price': 21890,
       'pic': '../../../assets/images/products/horgaszbot_1.png',
       'description': 'Prologic C-SERIES SPOD MARKER AB 12ft 5LBS 50MM'
+    }
+    ,
+    {
+      'id': 4,
+      'name': 'Csizma',
+      'category': 'Ruházat',
+      'instock': true,
+      'price': 12490,
+      'pic': '../../../assets/images/products/csizma.jpeg',
+      'description': 'OUTDOOR EVA CSIZMA THERMO PLUS -20C'
+    }
+    ,
+    {
+      'id': 5,
+      'name': 'Kapásjelző',
+      'category': 'Felszerelés',
+      'instock': true,
+      'price': 42000,
+      'pic': '../../../assets/images/products/kapasjelzo.png',
+      'description': 'Delphin Optimo elektromos kapásjelző szett ajándék swingerrel'
+    }
+    ,
+    {
+      'id': 6,
+      'name': 'Csali táska',
+      'category': 'Felszerelés',
+      'instock': true,
+      'price': 5190,
+      'pic': '../../../assets/images/products/csalitaska.png',
+      'description': 'Delphin BaiTyx csalis övtáska'
     }
   ];

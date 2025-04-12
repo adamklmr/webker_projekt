@@ -29,4 +29,24 @@ export interface Event {
         'pic': '../../../assets/images/events/verseny.jpg',
         'description': 'Egy izgalmas horgászverseny!'
     }
+    ,
+    {
+        'id': 5,
+        'name': 'Horgászfesztivál',
+        'startDate': new Date('2025-08-01'),
+        'endDate': new Date('2025-08-03'),
+        'location': 'Tópart déli része',
+        'pic': '../../../assets/images/events/fesztival.png',
+        'description': 'Egy szuper horgászfesztivál!'
+    }
+    ,
+    {
+        'id': 6,
+        'name': 'Horgász Workshop',
+        'startDate': new Date('2025-10-15'),
+        'endDate': new Date('2025-10-16'),
+        'location': 'Tópart oktatóközpont',
+        'pic': '../../../assets/images/events/workshop.png',
+        'description': 'Egy oktató jellegű horgász workshop!'
+    }
 ];
