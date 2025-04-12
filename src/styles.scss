@@ -20,6 +20,8 @@
   @include mat.paginator-overrides((
     container-text-color: white,
     container-background-color: #58a7b3,
+    enabled-icon-color: white,
+    disabled-icon-color: white,
   ));
   @include mat.select-overrides((
     focused-arrow-color: #58a7b3,
@@ -28,12 +30,12 @@
   @include mat.checkbox-overrides((
     selected-icon-color: #58a7b3,
     selected-hover-icon-color: #438797,
+    selected-focus-icon-color: #438797,
   ));
   @include mat.datepicker-overrides((
     calendar-date-selected-state-text-color: white,
     calendar-date-selected-state-background-color: #58a7b3,
     calendar-date-today-outline-color: #58a7b3,
-
   ));
 }
 body {

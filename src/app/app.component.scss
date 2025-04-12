@@ -102,12 +102,12 @@ mat-toolbar{
     .search-bar-container{
         width: 70%;
     }
-    .profile-sidenav,.login-sidenav,.logout-sidenav{
+    .profile-sidenav,.login-sidenav,.logout-sidenav,.admin-sidenav{
         display: flex;
     }
 }
 @media (min-width: 905px) {
-    .profile-sidenav,.login-sidenav,.logout-sidenav{
+    .profile-sidenav,.login-sidenav,.logout-sidenav,.admin-sidenav{
         display: none;
     }
 }
@@ -246,7 +246,6 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    
     p {
       margin: 0;
     }

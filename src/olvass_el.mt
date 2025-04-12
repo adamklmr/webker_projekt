@@ -4,3 +4,8 @@ Admin bejelentkezés
 Felhasználó bejelentkezés
     email: test@gmail.com
     jelszó: teszt123
+TODO - 2. mérföldkőre:
+    - Kép feltöltése admin oldalon
+    - Kosárban a termékek mennyiségének a beállítása
+    - Keresés megvalósítása az oldalon
+    - Footer kibővítése
