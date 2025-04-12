@@ -87,6 +87,7 @@ export class CartComponent {
         this.products = []; // Frissítjük a termékek tömbjét
         this.discount = 0;
         console.log(this.discountedPrice);
+        this.discountedPrice = 0;
   }
  
 
