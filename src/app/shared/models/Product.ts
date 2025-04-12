@@ -11,7 +11,7 @@ export interface Product {
     {
       'id': 1,
       'name': 'Orsó',
-      'category': 'Orsók',
+      'category': 'Felszerelés',
       'instock': true,
       'price': 12000,
       'pic': '../../../assets/images/products/orso.jpg',
@@ -25,5 +25,15 @@ export interface Product {
       'price': 8000,
       'pic': '../../../assets/images/products/ruha.jpg',
       'description': 'Egy nagyon szép ruhadarab, ami mindenki kedvence!'
+    }
+    ,
+    {
+      'id': 3,
+      'name': 'Horgászbot',
+      'category': 'Felszerelés',
+      'instock': true,
+      'price': 21890,
+      'pic': '../../../assets/images/products/horgaszbot_1.png',
+      'description': 'Prologic C-SERIES SPOD MARKER AB 12ft 5LBS 50MM'
     }
   ];
