@@ -18,6 +18,7 @@ import { EventsComponent } from './pages/events/events.component';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [
     CommonModule,
     RouterOutlet,
@@ -31,7 +32,7 @@ import { EventsComponent } from './pages/events/events.component';
     
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
   title = 'goldfish';
@@ -45,14 +46,21 @@ export class AppComponent implements OnInit {
   }
   
   updateAuthStatus(): void {
-    const loggedIn = localStorage.getItem('isLoggedIn') === 'true';
-    this.isLoggedIn = loggedIn;
-    this.isAdmin = loggedIn && (localStorage.getItem('isAdmin') === 'true');
+    if (typeof window !== 'undefined' && window.localStorage) {
+      const loggedIn = localStorage.getItem('isLoggedIn') === 'true';
+      this.isLoggedIn = loggedIn;
+      this.isAdmin = loggedIn && (localStorage.getItem('isAdmin') === 'true');
+    } else {
+      this.isLoggedIn = false;
+      this.isAdmin = false;
+    }
   }
   
   logout(): void {
     localStorage.setItem('isLoggedIn', 'false');
+    localStorage.setItem('isAdmin', 'false');
     this.isLoggedIn = false;
+    this.isAdmin = false;
     window.location.href = '/home';
   }
   

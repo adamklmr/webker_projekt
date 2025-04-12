@@ -70,7 +70,9 @@ export class SignupComponent {
       eventsNumber: 0,
 
     };
-
+    localStorage.setItem('isLoggedIn', 'true');
+      localStorage.setItem('isAdmin', 'false');
+      window.location.href = '/home';
     console.log('New user:', newUser);
     console.log('Form value:', this.signUpForm.value);
 

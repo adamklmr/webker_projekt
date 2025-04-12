@@ -25,7 +25,7 @@ export class MenuComponent implements OnInit, AfterViewInit {
   @Output() logoutEvent = new EventEmitter<void>();
 
   constructor() {
-    console.log("constructor called");
+    // console.log("constructor called");
   }
 
   ngOnInit(): void {
@@ -34,7 +34,7 @@ export class MenuComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    console.log("ngAfterViewInit called");
+    // console.log("ngAfterViewInit called");
   }
 
   closeMenu() {
@@ -43,11 +43,22 @@ export class MenuComponent implements OnInit, AfterViewInit {
     }
   }
   checkLoginStatus(): void {
-    this.isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    if (typeof window !== 'undefined' && window.localStorage) {
+      const loggedIn = localStorage.getItem('isLoggedIn') === 'true';
+      this.isLoggedIn = loggedIn;
+      this.isAdmin = loggedIn && (localStorage.getItem('isAdmin') === 'true');
+    } else {
+      this.isLoggedIn = false;
+      this.isAdmin = false;
+    }
   }
-  checkAdminStatus(): void {
-    this.isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-    this.isAdmin = localStorage.getItem('isAdmin') === 'true';
+  checkAdminStatus() {
+    if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+      const isAdmin = localStorage.getItem('isAdmin');
+      this.isAdmin = isAdmin === 'true';
+    } else {
+      this.isAdmin = false;
+    }
   }
 
   logout() {

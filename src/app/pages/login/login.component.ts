@@ -38,25 +38,30 @@ export class LoginComponent {
 
   login() {
     this.loginError = '';
-  
-    const email = this.email.value;
-    const password = this.password.value;
-  
-    if (email === 'test@gmail.com' && password === 'teszt123') {
+
+  const email = this.email.value;
+  const password = this.password.value;
+
+  const isBrowser = typeof window !== 'undefined' && typeof localStorage !== 'undefined';
+
+  if (email === 'test@gmail.com' && password === 'teszt123') {
+    if (isBrowser) {
       localStorage.setItem('isLoggedIn', 'true');
-      localStorage.setItem('isAdmin', 'false'); // Nem admin user
-      this.showLoginForm = false;
+      localStorage.setItem('isAdmin', 'false');
       window.location.href = '/home';
-  
-    } else if (email === 'admin@gmail.com' && password === 'admin') {
+    }
+    this.showLoginForm = false;
+
+  } else if (email === 'admin@gmail.com' && password === 'admin') {
+    if (isBrowser) {
       localStorage.setItem('isLoggedIn', 'true');
       localStorage.setItem('isAdmin', 'true');
-      this.showLoginForm = false;
       window.location.href = '/home';
-  
-    } else {
-      this.loginError = 'Invalid email or password!';
     }
+    this.showLoginForm = false;
+
+  } else {
+    this.loginError = 'Invalid email or password!';
   }
-  
+  }
 }

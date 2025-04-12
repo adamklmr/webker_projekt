@@ -3,7 +3,7 @@
     flex-direction: column;
     padding: 1rem;
     // border: 1px solid black;
-    // height: 100vh;
+    height: 100vh;
     // width: 100vw;
 }
 .events-container {
@@ -13,7 +13,7 @@
     align-items:flex-start;
     // border: 1px solid black;
     justify-content: center;
-    height: 80vh;
+    padding-bottom:10px ;
 }
 .event-card{
     display: flex;
