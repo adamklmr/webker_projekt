@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MenuComponent } from './shared/menu/menu.component';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
@@ -9,9 +9,12 @@ import { RouterLink } from '@angular/router';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { CartComponent } from './pages/cart/cart.component';
 import { AdminComponent } from './pages/admin/admin.component';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { ProductsComponent } from './pages/products/products.component';
 import { EventsComponent } from './pages/events/events.component';
+import { initializeAnalytics } from 'firebase/analytics';
+import { initializeApp } from 'firebase/app';
+import { environment } from '../environments/environment';
 
 
 
@@ -39,14 +42,19 @@ export class AppComponent implements OnInit {
   isLoggedIn = false;
   isAdmin= false;
 
-  constructor() {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  
 
   ngOnInit(): void {
     this.updateAuthStatus();
+    if (typeof window !== 'undefined') {
+      const app = initializeApp(environment.firebaseConfig);
+      const analytics = initializeAnalytics(app);
+    }
   }
   
   updateAuthStatus(): void {
-    if (typeof window !== 'undefined' && window.localStorage) {
+    if (isPlatformBrowser(this.platformId)) {
       const loggedIn = localStorage.getItem('isLoggedIn') === 'true';
       this.isLoggedIn = loggedIn;
       this.isAdmin = loggedIn && (localStorage.getItem('isAdmin') === 'true');
@@ -54,6 +62,7 @@ export class AppComponent implements OnInit {
       this.isLoggedIn = false;
       this.isAdmin = false;
     }
+    
   }
   
   logout(): void {
